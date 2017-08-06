@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireRSSParser
 
 class ViewController: UIViewController {
 
@@ -14,14 +16,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        activityIndicator.startAnimating()
+        
+        DispatchQueue.global().async {
+            RSSParser.getRSSFeedResponse(path: "https://meduza.io/rss/all") { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
+                print("\n", rssFeed!)
+            }
+            
+            DispatchQueue.main.async(execute: {
+                Timer.scheduledTimer(withTimeInterval: 3,
+                                     repeats: false) {
+                                        timer in
+                                        self.activityIndicator.stopAnimating()
+                }
+            })
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 
 }
+
 

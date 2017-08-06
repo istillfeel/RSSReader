@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireRSSParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RSSReader.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>454ABD67963999B94FEDC290804D36BA</key>
+		<key>00B227DED18BA79C430A2A280823E9B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0ABCA8D4C97BE59F036E2A2D77DAEE61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>35A6BEB979CC10141D3586FFD30BF3D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9613A1EC952947BC1FDD96EBA86E2866</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D64D2EB61948F72E2F64CF4AAF3C07DD</key>
+		<key>A9B752A4FB5BEDD3C29C2B1C4F0D8031</key>
 		<dict>
 			<key>primary</key>
 			<true/>
