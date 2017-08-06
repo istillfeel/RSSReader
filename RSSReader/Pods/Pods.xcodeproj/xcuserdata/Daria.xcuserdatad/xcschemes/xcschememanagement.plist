@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>AlamofireRSSParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0ABCA8D4C97BE59F036E2A2D77DAEE61</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35A6BEB979CC10141D3586FFD30BF3D7</key>
+		<key>301AB83A75F225EAE337DF0DDDC4ABE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4624BBF334C6A3E936BF52214BF89B05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4936381C6C1D97FC9F0CE30D4040095B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9B752A4FB5BEDD3C29C2B1C4F0D8031</key>
+		<key>9502FB01641FBABB78522037E882757B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

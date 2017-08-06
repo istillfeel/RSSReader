@@ -14,7 +14,7 @@
 		431121111F3708EA00B432C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4311210F1F3708EA00B432C1 /* LaunchScreen.storyboard */; };
 		431121191F3714CC00B432C1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431121181F3714CC00B432C1 /* TableViewController.swift */; };
 		4311211B1F3714EB00B432C1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */; };
-		43949F621F3737F900A3936C /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43949F611F3737F900A3936C /* RSSParser.swift */; };
+		43949F641F37441400A3936C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43949F631F37441400A3936C /* News.swift */; };
 		A8905A9AAD309C30CB7C5560 /* Pods_RSSReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E20BD37E9780642E557B93 /* Pods_RSSReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		431121121F3708EA00B432C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431121181F3714CC00B432C1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		43949F611F3737F900A3936C /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
+		43949F631F37441400A3936C /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C02DCDE033C2674C98653FD6 /* Pods-RSSReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E20BD37E9780642E557B93 /* Pods_RSSReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 			children = (
 				431121061F3708EA00B432C1 /* AppDelegate.swift */,
 				431121081F3708EA00B432C1 /* ViewController.swift */,
-				43949F611F3737F900A3936C /* RSSParser.swift */,
+				43949F631F37441400A3936C /* News.swift */,
 				431121181F3714CC00B432C1 /* TableViewController.swift */,
 				4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */,
 				4311210A1F3708EA00B432C1 /* Main.storyboard */,
@@ -195,12 +195,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireRSSParser/AlamofireRSSParser.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireRSSParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -231,11 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43949F641F37441400A3936C /* News.swift in Sources */,
 				431121091F3708EA00B432C1 /* ViewController.swift in Sources */,
 				431121191F3714CC00B432C1 /* TableViewController.swift in Sources */,
 				4311211B1F3714EB00B432C1 /* CustomTableViewCell.swift in Sources */,
 				431121071F3708EA00B432C1 /* AppDelegate.swift in Sources */,
-				43949F621F3737F900A3936C /* RSSParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

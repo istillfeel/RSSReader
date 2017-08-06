@@ -5,14 +5,18 @@
 //  Created by Daria on 06.08.17.
 //  Copyright © 2017 Daria. All rights reserved.
 //
+//  News API are presented by https://newsapi.org
 
 import UIKit
 import Alamofire
-import AlamofireRSSParser
+import AlamofireObjectMapper
+import ObjectMapper
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    let url = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=2f6537187ab544e4bc9be28a00ffb384"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +24,14 @@ class ViewController: UIViewController {
         activityIndicator.startAnimating()
         
         DispatchQueue.global().async {
-            RSSParser.getRSSFeedResponse(path: "https://meduza.io/rss/all") { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
-                print("\n", rssFeed!)
+            
+            Alamofire.request(self.url).responseObject { (response: DataResponse<News>) in
+                let news = response.result.value
+                
+                if let articles = news?.articles {
+                    print(articles)
+                }
+                
             }
             
             DispatchQueue.main.async(execute: {
