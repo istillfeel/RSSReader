@@ -78,9 +78,9 @@
 			children = (
 				431121061F3708EA00B432C1 /* AppDelegate.swift */,
 				431121081F3708EA00B432C1 /* ViewController.swift */,
-				43949F631F37441400A3936C /* News.swift */,
 				431121181F3714CC00B432C1 /* TableViewController.swift */,
 				4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */,
+				43949F631F37441400A3936C /* News.swift */,
 				4311210A1F3708EA00B432C1 /* Main.storyboard */,
 				4311210D1F3708EA00B432C1 /* Assets.xcassets */,
 				4311210F1F3708EA00B432C1 /* LaunchScreen.storyboard */,
