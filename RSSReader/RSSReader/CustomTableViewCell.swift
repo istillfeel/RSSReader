@@ -35,7 +35,7 @@ class CustomTableViewCell: UITableViewCell {
         lb.font = UIFont.boldSystemFont(ofSize: 16)
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.lineBreakMode = .byWordWrapping
-        lb.numberOfLines = 0
+        lb.numberOfLines = 2
         
         return lb
     }()
@@ -79,13 +79,13 @@ class CustomTableViewCell: UITableViewCell {
         
         icon.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         icon.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
-        icon.widthAnchor.constraint(equalToConstant: 36).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        icon.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        icon.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         titleLabel.topAnchor.constraint(equalTo: icon.topAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 34).isActive = true
         
         authorLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
         authorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4).isActive = true
@@ -102,8 +102,8 @@ class CustomTableViewCell: UITableViewCell {
         descriptionLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: -8).isActive = true
         descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 8).isActive = true
     }
-
-}
+    
+    
 
 class CustomImageView: UIImageView {
     
@@ -146,3 +146,4 @@ class CustomImageView: UIImageView {
     }
 }
 
+}

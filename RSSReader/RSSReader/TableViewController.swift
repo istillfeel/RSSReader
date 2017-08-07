@@ -40,10 +40,22 @@ class TableViewController: UITableViewController {
 
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        let descriptionHeight = self.heightOfLabel(articles[indexPath.row].description!, view: self.view)
+        
+        return 72 + descriptionHeight
     }
+    func heightOfLabel(_ text: String, view: UIView) -> CGFloat {
+        
+        let size = CGSize(width: view.frame.width - 16, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 14)]
+        let rectangleHeight = String(text).boundingRect(with: size, options: options, attributes: attributes, context: nil).height
+        
+        return rectangleHeight
+    }
+
 
     // MARK: - Navigation
 
