@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     let url = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=2f6537187ab544e4bc9be28a00ffb384"
     
+    var articles = [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,28 +27,39 @@ class ViewController: UIViewController {
         
         DispatchQueue.global().async {
             
-            Alamofire.request(self.url).responseObject { (response: DataResponse<News>) in
-                let news = response.result.value
+            Alamofire.request(self.url).responseObject { [weak self] (response: DataResponse<News>) in
                 
-                if let articles = news?.articles {
-                    print(articles)
+                guard let articles = response.result.value?.articles else {
+                    //если по какой-то причине данные не загрузились
+                    self?.activityIndicator.stopAnimating()
+                    let alert = UIAlertController(title: "Error", message: "Error when loading news", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self?.present(alert, animated: true, completion: nil)
+                    return
                 }
                 
+                // если все ок загрузилось
+                DispatchQueue.main.async {
+                    self?.activityIndicator.stopAnimating()
+                    self?.performSegue(withIdentifier: "OpenTableView", sender: articles)
+                }
             }
             
-            DispatchQueue.main.async(execute: {
-                Timer.scheduledTimer(withTimeInterval: 3,
-                                     repeats: false) {
-                                        timer in
-                                        self.activityIndicator.stopAnimating()
-                }
-            })
         }
         
     }
-
     
-
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OpenTableView" {
+            guard let articles = sender as? [Article],
+                let tVC = (segue.destination as? UINavigationController)?.topViewController as? TableViewController else {
+                    return
+            }
+            tVC.articles = articles
+        }
+    }
+    
 }
-
 

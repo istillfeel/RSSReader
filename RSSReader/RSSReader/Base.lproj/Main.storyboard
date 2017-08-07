@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hk8-ei-BYU">
-                                <rect key="frame" x="20" y="89" width="336" height="63"/>
+                                <rect key="frame" x="20" y="89" width="335" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="3Ml-eF-92k"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, wait  for loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFs-h4-EmT">
-                                <rect key="frame" x="20" y="160" width="336" height="93"/>
+                                <rect key="frame" x="20" y="160" width="335" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="Wda-qd-yto"/>
                                 </constraints>
@@ -41,18 +41,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-3M-RKH">
-                                <rect key="frame" x="169.5" y="329" width="37" height="37"/>
+                                <rect key="frame" x="169" y="329" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MFs-h4-EmT" firstAttribute="top" secondItem="Hk8-ei-BYU" secondAttribute="bottom" constant="8" id="6zt-Cj-Phc"/>
-                            <constraint firstItem="Hk8-ei-BYU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="87D-ho-bJe"/>
                             <constraint firstItem="Qnl-3M-RKH" firstAttribute="centerX" secondItem="MFs-h4-EmT" secondAttribute="centerX" id="Ks5-Kk-GFh"/>
                             <constraint firstItem="Hk8-ei-BYU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="P7h-uD-ghW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hk8-ei-BYU" secondAttribute="trailing" constant="3" id="YAx-Ue-9Ta"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hk8-ei-BYU" secondAttribute="trailing" constant="4" id="YAx-Ue-9Ta"/>
                             <constraint firstItem="Qnl-3M-RKH" firstAttribute="top" secondItem="MFs-h4-EmT" secondAttribute="bottom" constant="76" id="h9F-4p-MrC"/>
-                            <constraint firstItem="MFs-h4-EmT" firstAttribute="centerX" secondItem="Hk8-ei-BYU" secondAttribute="centerX" id="hIl-39-yok"/>
                             <constraint firstItem="MFs-h4-EmT" firstAttribute="trailing" secondItem="Hk8-ei-BYU" secondAttribute="trailing" id="iTv-YH-t1n"/>
                             <constraint firstItem="Hk8-ei-BYU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="m1B-Nd-d6j"/>
                             <constraint firstItem="MFs-h4-EmT" firstAttribute="leading" secondItem="Hk8-ei-BYU" secondAttribute="leading" id="qSe-JF-3Ve"/>
@@ -61,14 +59,14 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Qnl-3M-RKH" id="2br-MY-V4R"/>
-                        <segue destination="RUh-X2-e2q" kind="show" id="o5N-Nr-siG"/>
+                        <segue destination="yI5-pO-I2K" kind="show" identifier="OpenTableView" id="mcO-1t-ntx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="135.38230884557723"/>
+            <point key="canvasLocation" x="20" y="134"/>
         </scene>
-        <!--Table View Controller-->
+        <!--BBC Sports-->
         <scene sceneID="ERM-2d-ZuK">
             <objects>
                 <tableViewController id="feh-EF-aU4" customClass="TableViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,29 +90,33 @@
                             <outlet property="delegate" destination="feh-EF-aU4" id="mse-Iw-OfU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ib4-4F-CZ5"/>
+                    <navigationItem key="navigationItem" title="BBC Sports" id="ib4-4F-CZ5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1k-Oh-6sN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="135"/>
+            <point key="canvasLocation" x="1582" y="134"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="I46-dN-c5g">
+        <scene sceneID="XfS-Lt-sjG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RUh-X2-e2q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yI5-pO-I2K" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vPz-sm-Mil">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="rBs-Dt-cgd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="feh-EF-aU4" kind="relationship" relationship="rootViewController" id="cgU-Yc-3tu"/>
+                        <segue destination="feh-EF-aU4" kind="relationship" relationship="rootViewController" id="2L6-5Q-ElI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IyI-kr-ANa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6t-9J-HV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="134"/>
+            <point key="canvasLocation" x="815" y="134"/>
         </scene>
     </scenes>
 </document>

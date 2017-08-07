@@ -83,18 +83,18 @@ class CustomTableViewCell: UITableViewCell {
         icon.heightAnchor.constraint(equalToConstant: 36).isActive = true
         
         titleLabel.topAnchor.constraint(equalTo: icon.topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: -8).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 8).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         authorLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
-        authorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: -4).isActive = true
-        authorLabel.widthAnchor.constraint(equalToConstant: titleLabel.frame.width / 2).isActive = true
+        authorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4).isActive = true
+        authorLabel.widthAnchor.constraint(equalTo: titleLabel.widthAnchor, multiplier: 0.35).isActive = true
         authorLabel.heightAnchor.constraint(equalToConstant: 12).isActive = true
         
         dateLabel.topAnchor.constraint(equalTo: authorLabel.topAnchor).isActive = true
         dateLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
-        dateLabel.widthAnchor.constraint(equalToConstant: titleLabel.frame.width / 2).isActive = true
+        dateLabel.widthAnchor.constraint(equalTo: titleLabel.widthAnchor, multiplier: 0.65).isActive = true
         dateLabel.heightAnchor.constraint(equalToConstant: 12).isActive = true
         
         descriptionLabel.leadingAnchor.constraint(equalTo: icon.leadingAnchor).isActive = true
