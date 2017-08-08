@@ -15,6 +15,7 @@
 		431121191F3714CC00B432C1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431121181F3714CC00B432C1 /* TableViewController.swift */; };
 		4311211B1F3714EB00B432C1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */; };
 		43464CC11F388E750080CE8C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43464CC01F388E750080CE8C /* DetailsViewController.swift */; };
+		43464D031F3A3C840080CE8C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43464D021F3A3C840080CE8C /* Extensions.swift */; };
 		43949F641F37441400A3936C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43949F631F37441400A3936C /* News.swift */; };
 		A8905A9AAD309C30CB7C5560 /* Pods_RSSReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E20BD37E9780642E557B93 /* Pods_RSSReader.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		431121181F3714CC00B432C1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		43464CC01F388E750080CE8C /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		43464D021F3A3C840080CE8C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		43949F631F37441400A3936C /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C02DCDE033C2674C98653FD6 /* Pods-RSSReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E20BD37E9780642E557B93 /* Pods_RSSReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				4311211A1F3714EB00B432C1 /* CustomTableViewCell.swift */,
 				43464CC01F388E750080CE8C /* DetailsViewController.swift */,
 				43949F631F37441400A3936C /* News.swift */,
+				43464D021F3A3C840080CE8C /* Extensions.swift */,
 				4311210A1F3708EA00B432C1 /* Main.storyboard */,
 				4311210D1F3708EA00B432C1 /* Assets.xcassets */,
 				4311210F1F3708EA00B432C1 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 				4311211B1F3714EB00B432C1 /* CustomTableViewCell.swift in Sources */,
 				431121071F3708EA00B432C1 /* AppDelegate.swift in Sources */,
 				43464CC11F388E750080CE8C /* DetailsViewController.swift in Sources */,
+				43464D031F3A3C840080CE8C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

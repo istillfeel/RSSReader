@@ -14,6 +14,7 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var newsTextView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     
     var article: Article?
     
@@ -29,6 +30,7 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
     func updateUI() {
         titleLabel.text = article?.title
         dateLabel.text = article?.publishedAt
+        authorLabel.text = article?.author
         newsTextView.text = article?.description
         imageView.loadImageUsingUrlString(urlString: (article?.urlToImage)!)
     }
