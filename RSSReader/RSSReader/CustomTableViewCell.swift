@@ -79,13 +79,13 @@ class CustomTableViewCell: UITableViewCell {
         
         icon.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         icon.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
-        icon.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        icon.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        icon.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        icon.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         titleLabel.topAnchor.constraint(equalTo: icon.topAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 8).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
         authorLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
         authorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4).isActive = true

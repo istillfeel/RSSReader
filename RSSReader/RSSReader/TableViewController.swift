@@ -44,8 +44,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let descriptionHeight = self.heightOfLabel(articles[indexPath.row].description!, view: self.view)
         
-        return 72 + descriptionHeight
+        return 84 + descriptionHeight
     }
+    
+    // динамическая высота ячейки
     func heightOfLabel(_ text: String, view: UIView) -> CGFloat {
         
         let size = CGSize(width: view.frame.width - 16, height: 1000)
@@ -59,8 +61,12 @@ class TableViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toDetailVC",
+//            let destinationViewController = segue.destination as? DetailViewController
+//        destinationViewController.object = selectedObject
+    }
 }
+
+
