@@ -118,7 +118,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8n-fK-Tlk" customClass="CustomImageView" customModule="RSSReader" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8n-fK-Tlk" customClass="CustomImageView" customModule="RSSReader" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.4302372431" blue="0.84974954329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

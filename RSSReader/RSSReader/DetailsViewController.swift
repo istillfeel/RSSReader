@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
         titleLabel.text = article?.title
         dateLabel.text = article?.publishedAt
         newsTextView.text = article?.description
-        //imageView.loadImageUsingUrlString(urlString: (article?.url)!)
+        imageView.loadImageUsingUrlString(urlString: (article?.urlToImage)!)
     }
     
 //    func setupWebView() {

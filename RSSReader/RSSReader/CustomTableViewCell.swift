@@ -109,7 +109,7 @@ class CustomImageView: UIImageView {
     let imageCache = NSCache<NSString, UIImage>()
     var imageUrlString: String?
     
-    func loadImageUsingUrlString(urlString: String){
+    func loadImageUsingUrlString(urlString: String) {
         
         imageUrlString = urlString
         
@@ -128,7 +128,7 @@ class CustomImageView: UIImageView {
                 return
             }
             
-            DispatchQueue.main.async {[unowned self] in
+            DispatchQueue.main.async { [unowned self] in
                 
                 let imageToCache = UIImage(data: data!)
                 
