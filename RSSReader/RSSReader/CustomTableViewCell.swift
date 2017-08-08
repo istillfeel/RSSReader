@@ -102,8 +102,7 @@ class CustomTableViewCell: UITableViewCell {
         descriptionLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: -8).isActive = true
         descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 8).isActive = true
     }
-    
-    
+}
 
 class CustomImageView: UIImageView {
     
@@ -144,6 +143,4 @@ class CustomImageView: UIImageView {
             
         }).resume()
     }
-}
-
 }

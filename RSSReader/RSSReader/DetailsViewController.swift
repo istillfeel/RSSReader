@@ -8,17 +8,42 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UIWebViewDelegate {
 
+    @IBOutlet weak var imageView: CustomImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var newsTextView: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var article: Article?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.tintColor = .white
+        updateUI()
+        //setupWebView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateUI() {
+        titleLabel.text = article?.title
+        dateLabel.text = article?.publishedAt
+        newsTextView.text = article?.description
+        //imageView.loadImageUsingUrlString(urlString: (article?.url)!)
     }
-
+    
+//    func setupWebView() {
+//        let webview = UIWebView()
+//        webview.delegate = self
+//        
+//        let url = URL(string: (article?.url)!)
+//        webview.loadRequest(URLRequest(url: url!))
+//    }
+//
+//    func webViewDidFinishLoad(_ webView: UIWebView) {
+//        if let textContent = webView.stringByEvaluatingJavaScript(from: "document.body.innerText") {
+//            print(textContent)
+//        }
+//    }
 }

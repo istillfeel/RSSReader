@@ -15,7 +15,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 
@@ -37,6 +37,7 @@ class TableViewController: UITableViewController {
         cell.authorLabel.text = articles[indexPath.row].author
         cell.dateLabel.text = articles[indexPath.row].publishedAt
         cell.descriptionLabel.text = articles[indexPath.row].description
+        cell.icon.loadImageUsingUrlString(urlString: articles[indexPath.row].urlToImage!)
 
         return cell
     }
@@ -45,6 +46,11 @@ class TableViewController: UITableViewController {
         let descriptionHeight = self.heightOfLabel(articles[indexPath.row].description!, view: self.view)
         
         return 84 + descriptionHeight
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = articles[indexPath.row]
+        self.performSegue(withIdentifier: "toDetailVC", sender: article)
     }
     
     // динамическая высота ячейки
@@ -60,12 +66,14 @@ class TableViewController: UITableViewController {
 
 
     // MARK: - Navigation
-
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toDetailVC",
-//            let destinationViewController = segue.destination as? DetailViewController
-//        destinationViewController.object = selectedObject
+        if segue.identifier == "toDetailVC",
+            let destinationViewController = segue.destination as? DetailsViewController,
+            let article = sender as? Article {
+            
+            destinationViewController.article = article
+        }
     }
 }
 
