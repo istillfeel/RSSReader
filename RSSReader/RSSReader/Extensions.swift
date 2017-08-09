@@ -48,3 +48,18 @@ class CustomImageView: UIImageView {
         }).resume()
     }
 }
+
+extension String {
+    
+    func convertDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: self)!
+        
+        dateFormatter.dateFormat = "HH:mm, dd.MM.YYYY"
+        let dateString = dateFormatter.string(from: date)
+        
+        return dateString
+    }
+    
+}

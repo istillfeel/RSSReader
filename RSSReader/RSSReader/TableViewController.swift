@@ -35,9 +35,12 @@ class TableViewController: UITableViewController {
 
         cell.titleLabel.text = articles[indexPath.row].title
         cell.authorLabel.text = articles[indexPath.row].author
-        cell.dateLabel.text = articles[indexPath.row].publishedAt
         cell.descriptionLabel.text = articles[indexPath.row].description
         cell.icon.loadImageUsingUrlString(urlString: articles[indexPath.row].urlToImage!)
+        
+        if let dateString = articles[indexPath.row].publishedAt {
+            cell.dateLabel.text = dateString.convertDate()
+        }
 
         return cell
     }
@@ -47,6 +50,7 @@ class TableViewController: UITableViewController {
         
         return 84 + descriptionHeight
     }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = articles[indexPath.row]

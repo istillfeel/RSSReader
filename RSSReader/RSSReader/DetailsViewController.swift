@@ -29,10 +29,15 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
 
     func updateUI() {
         titleLabel.text = article?.title
-        dateLabel.text = article?.publishedAt
         authorLabel.text = article?.author
         newsTextView.text = article?.description
         imageView.loadImageUsingUrlString(urlString: (article?.urlToImage)!)
+        
+        guard let dateString = article?.publishedAt else {
+            return
+        }
+        
+        dateLabel.text = dateString.convertDate()
     }
     
 //    func setupWebView() {
@@ -49,3 +54,4 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
 //        }
 //    }
 }
+
