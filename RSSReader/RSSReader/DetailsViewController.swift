@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailsViewController: UIViewController, UIWebViewDelegate {
 
@@ -40,18 +41,12 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
         dateLabel.text = dateString.convertDate()
     }
     
-//    func setupWebView() {
-//        let webview = UIWebView()
-//        webview.delegate = self
-//        
-//        let url = URL(string: (article?.url)!)
-//        webview.loadRequest(URLRequest(url: url!))
-//    }
-//
-//    func webViewDidFinishLoad(_ webView: UIWebView) {
-//        if let textContent = webView.stringByEvaluatingJavaScript(from: "document.body.innerText") {
-//            print(textContent)
-//        }
-//    }
+    
+    @IBAction func openSafariViewController(_ sender: UIButton) {
+        let url = URL(string: (article?.url)!)
+        let svc = SFSafariViewController(url: url!)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
 }
 

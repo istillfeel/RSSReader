@@ -76,7 +76,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="75S-x1-4Ri" customClass="CustomTableViewCell" customModule="RSSReader" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="75S-x1-4Ri" customClass="CustomTableViewCell" customModule="RSSReader" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="75S-x1-4Ri" id="Gf0-L9-3jI">
@@ -139,12 +139,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-KI-AZ7">
-                                <rect key="frame" x="0.0" y="328" width="375" height="339"/>
+                                <rect key="frame" x="0.0" y="328" width="375" height="304"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-QS-VWb">
+                                <rect key="frame" x="238" y="632" width="137" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="19Z-4o-GiS"/>
+                                    <constraint firstAttribute="width" constant="137" id="3bL-MK-tIz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="View full news">
+                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSafariViewController:" destination="jB9-W0-nhK" eventType="touchUpInside" id="9cB-Bn-vqk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,13 +172,15 @@
                             <constraint firstItem="dnH-BQ-YQv" firstAttribute="top" secondItem="jF5-Mp-SQa" secondAttribute="bottom" constant="3" id="TDc-Vm-Jam"/>
                             <constraint firstItem="t8n-fK-Tlk" firstAttribute="top" secondItem="s7f-bb-3fF" secondAttribute="bottom" id="X18-MF-BWe"/>
                             <constraint firstItem="LSY-KI-AZ7" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" constant="-16" id="XtF-td-xLb"/>
-                            <constraint firstItem="p9L-iL-7tH" firstAttribute="top" secondItem="LSY-KI-AZ7" secondAttribute="bottom" id="a2t-qH-tEg"/>
+                            <constraint firstItem="p9L-iL-7tH" firstAttribute="top" secondItem="LSY-KI-AZ7" secondAttribute="bottom" constant="35" id="a2t-qH-tEg"/>
+                            <constraint firstItem="p9L-iL-7tH" firstAttribute="top" secondItem="b9T-QS-VWb" secondAttribute="bottom" id="alG-7P-e2O"/>
                             <constraint firstAttribute="trailing" secondItem="t8n-fK-Tlk" secondAttribute="trailing" id="fOy-SZ-ks1"/>
                             <constraint firstItem="dnH-BQ-YQv" firstAttribute="top" secondItem="O5s-gr-GLg" secondAttribute="bottom" constant="3" id="iRJ-ce-s3l"/>
                             <constraint firstItem="O5s-gr-GLg" firstAttribute="top" secondItem="t8n-fK-Tlk" secondAttribute="bottom" constant="8" id="ipi-Ev-gco"/>
                             <constraint firstItem="LSY-KI-AZ7" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" constant="16" id="jY2-f4-fOw"/>
                             <constraint firstItem="LSY-KI-AZ7" firstAttribute="top" secondItem="dnH-BQ-YQv" secondAttribute="bottom" id="nA0-dE-mG3"/>
                             <constraint firstItem="dnH-BQ-YQv" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" constant="9" id="qqw-6W-yUM"/>
+                            <constraint firstAttribute="trailing" secondItem="b9T-QS-VWb" secondAttribute="trailing" id="uRj-tt-ZHX"/>
                             <constraint firstItem="O5s-gr-GLg" firstAttribute="centerY" secondItem="jF5-Mp-SQa" secondAttribute="centerY" id="wnX-dz-hpe"/>
                         </constraints>
                     </view>

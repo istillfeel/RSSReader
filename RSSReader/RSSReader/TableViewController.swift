@@ -64,7 +64,6 @@ class TableViewController: UITableViewController {
         return 84 + descriptionHeight
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = articles[indexPath.row]
         self.performSegue(withIdentifier: "toDetailVC", sender: article)
