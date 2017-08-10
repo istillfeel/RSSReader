@@ -34,8 +34,10 @@ class CustomTableViewCell: UITableViewCell {
         let lb = UILabel()
         lb.font = UIFont.boldSystemFont(ofSize: 16)
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.lineBreakMode = .byWordWrapping
+        lb.lineBreakMode = .byTruncatingTail
         lb.numberOfLines = 2
+        lb.adjustsFontSizeToFitWidth = true
+        lb.minimumScaleFactor = 0.2
         
         return lb
     }()

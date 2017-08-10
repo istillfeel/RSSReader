@@ -7,46 +7,59 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TableViewController: UITableViewController {
     
     let reuseIdentifier = "Cell"
-    var articles = [Article]()
+    var articles: Results<Article>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        
+        getArticlesFormDataBase()
     }
-
+    
+    func getArticlesFormDataBase() {
+        do {
+            let realm = try Realm()
+            articles = realm.objects(Article.self)
+            
+            print(articles.count)
+            
+            self.tableView.reloadData()
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CustomTableViewCell
-
+        
         cell.titleLabel.text = articles[indexPath.row].title
         cell.authorLabel.text = articles[indexPath.row].author
-        cell.descriptionLabel.text = articles[indexPath.row].description
-        cell.icon.loadImageUsingUrlString(urlString: articles[indexPath.row].urlToImage!)
+        cell.descriptionLabel.text = articles[indexPath.row].descriptionNews
+        cell.icon.loadImageUsingUrlString(urlString: articles[indexPath.row].urlToImage)
+        cell.dateLabel.text = articles[indexPath.row].publishedAt.convertDate()
         
-        if let dateString = articles[indexPath.row].publishedAt {
-            cell.dateLabel.text = dateString.convertDate()
-        }
-
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let descriptionHeight = self.heightOfLabel(articles[indexPath.row].description!, view: self.view)
+        let descriptionHeight = self.heightOfLabel(articles[indexPath.row].descriptionNews, view: self.view)
         
         return 84 + descriptionHeight
     }
@@ -67,8 +80,8 @@ class TableViewController: UITableViewController {
         
         return rectangleHeight
     }
-
-
+    
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

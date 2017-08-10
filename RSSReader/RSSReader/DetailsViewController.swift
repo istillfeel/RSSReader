@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController, UIWebViewDelegate {
     func updateUI() {
         titleLabel.text = article?.title
         authorLabel.text = article?.author
-        newsTextView.text = article?.description
+        newsTextView.text = article?.descriptionNews
         imageView.loadImageUsingUrlString(urlString: (article?.urlToImage)!)
         
         guard let dateString = article?.publishedAt else {

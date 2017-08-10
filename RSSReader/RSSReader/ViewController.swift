@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import RealmSwift
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     
     let url = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=2f6537187ab544e4bc9be28a00ffb384"
     
-    var articles = [Article]()
+    var articles = List<Article>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,17 @@ class ViewController: UIViewController {
                     return
                 }
                 
+                print(articles)
+                
+                do {
+                    let realm = try Realm()
+                    try realm.write {
+                        articles.forEach { realm.add($0, update: true) }
+                    }
+                } catch let error as NSError {
+                    print(error)
+                }
+                
                 // если все ок загрузилось
                 DispatchQueue.main.async {
                     self?.activityIndicator.stopAnimating()
@@ -53,11 +65,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenTableView" {
-            guard let articles = sender as? [Article],
-                let tVC = (segue.destination as? UINavigationController)?.topViewController as? TableViewController else {
-                    return
-            }
-            tVC.articles = articles
+            
         }
     }
     

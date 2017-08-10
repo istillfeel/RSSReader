@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="20" y="134"/>
         </scene>
-        <!--BBC Sports-->
+        <!--BBC Sport-->
         <scene sceneID="ERM-2d-ZuK">
             <objects>
                 <tableViewController id="feh-EF-aU4" customClass="TableViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="feh-EF-aU4" id="mse-Iw-OfU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BBC Sports" id="ib4-4F-CZ5"/>
+                    <navigationItem key="navigationItem" title="BBC Sport" id="ib4-4F-CZ5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1k-Oh-6sN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label ssss ssssss ssssss" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnH-BQ-YQv">
-                                <rect key="frame" x="16" y="242" width="343" height="86"/>
+                                <rect key="frame" x="7" y="242" width="361" height="86"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5s-gr-GLg">
-                                <rect key="frame" x="16" y="222" width="257" height="17"/>
+                                <rect key="frame" x="7" y="222" width="275" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="oFA-Fo-f3Z"/>
                                 </constraints>
@@ -133,13 +133,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBC Sport" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF5-Mp-SQa">
-                                <rect key="frame" x="291" y="222" width="68" height="17"/>
+                                <rect key="frame" x="300" y="222" width="68" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-KI-AZ7">
-                                <rect key="frame" x="16" y="328" width="343" height="319"/>
+                                <rect key="frame" x="0.0" y="328" width="375" height="339"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -150,21 +150,21 @@
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jF5-Mp-SQa" firstAttribute="leading" secondItem="O5s-gr-GLg" secondAttribute="trailing" constant="18" id="Bdr-ID-dYL"/>
-                            <constraint firstItem="dnH-BQ-YQv" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" id="DGS-RC-ffk"/>
+                            <constraint firstItem="dnH-BQ-YQv" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" constant="-9" id="DGS-RC-ffk"/>
                             <constraint firstItem="jF5-Mp-SQa" firstAttribute="top" secondItem="t8n-fK-Tlk" secondAttribute="bottom" constant="8" id="Dj3-3Y-yRb"/>
-                            <constraint firstItem="O5s-gr-GLg" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" id="Ljb-tb-c58"/>
-                            <constraint firstItem="jF5-Mp-SQa" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" id="Qcj-Bx-WL4"/>
+                            <constraint firstItem="O5s-gr-GLg" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" constant="-9" id="Ljb-tb-c58"/>
+                            <constraint firstItem="jF5-Mp-SQa" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" constant="9" id="Qcj-Bx-WL4"/>
                             <constraint firstItem="t8n-fK-Tlk" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leading" id="RsR-ns-VIH"/>
                             <constraint firstItem="dnH-BQ-YQv" firstAttribute="top" secondItem="jF5-Mp-SQa" secondAttribute="bottom" constant="3" id="TDc-Vm-Jam"/>
                             <constraint firstItem="t8n-fK-Tlk" firstAttribute="top" secondItem="s7f-bb-3fF" secondAttribute="bottom" id="X18-MF-BWe"/>
-                            <constraint firstItem="LSY-KI-AZ7" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" id="XtF-td-xLb"/>
-                            <constraint firstItem="p9L-iL-7tH" firstAttribute="top" secondItem="LSY-KI-AZ7" secondAttribute="bottom" constant="20" id="a2t-qH-tEg"/>
+                            <constraint firstItem="LSY-KI-AZ7" firstAttribute="leading" secondItem="ofe-gW-PZR" secondAttribute="leadingMargin" constant="-16" id="XtF-td-xLb"/>
+                            <constraint firstItem="p9L-iL-7tH" firstAttribute="top" secondItem="LSY-KI-AZ7" secondAttribute="bottom" id="a2t-qH-tEg"/>
                             <constraint firstAttribute="trailing" secondItem="t8n-fK-Tlk" secondAttribute="trailing" id="fOy-SZ-ks1"/>
                             <constraint firstItem="dnH-BQ-YQv" firstAttribute="top" secondItem="O5s-gr-GLg" secondAttribute="bottom" constant="3" id="iRJ-ce-s3l"/>
                             <constraint firstItem="O5s-gr-GLg" firstAttribute="top" secondItem="t8n-fK-Tlk" secondAttribute="bottom" constant="8" id="ipi-Ev-gco"/>
-                            <constraint firstItem="LSY-KI-AZ7" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" id="jY2-f4-fOw"/>
+                            <constraint firstItem="LSY-KI-AZ7" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" constant="16" id="jY2-f4-fOw"/>
                             <constraint firstItem="LSY-KI-AZ7" firstAttribute="top" secondItem="dnH-BQ-YQv" secondAttribute="bottom" id="nA0-dE-mG3"/>
-                            <constraint firstItem="dnH-BQ-YQv" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" id="qqw-6W-yUM"/>
+                            <constraint firstItem="dnH-BQ-YQv" firstAttribute="trailing" secondItem="ofe-gW-PZR" secondAttribute="trailingMargin" constant="9" id="qqw-6W-yUM"/>
                             <constraint firstItem="O5s-gr-GLg" firstAttribute="centerY" secondItem="jF5-Mp-SQa" secondAttribute="centerY" id="wnX-dz-hpe"/>
                         </constraints>
                     </view>
@@ -185,7 +185,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yI5-pO-I2K" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="rBs-Dt-cgd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="rBs-Dt-cgd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>

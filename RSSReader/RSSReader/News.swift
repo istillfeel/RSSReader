@@ -8,44 +8,56 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class News: Mappable {
+class News: Object, Mappable {
     
-    var status: String?
-    var source: String?
-    var sortBy: String?
-    var articles: [Article]?
+    dynamic var status = ""
+    dynamic var source = ""
+    dynamic var sortBy = ""
+    var articles = List<Article>()
     
-    required init?(map: Map){
-        
+    override static func primaryKey() -> String? {
+        return "source"
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
         status <- map["status"]
         source <- map["source"]
         sortBy <- map["sortBy"]
-        articles <- map["articles"]
+        if let articlesData =  map["articles"].currentValue as? [[String: Any]] {
+            articles.append(contentsOf: Mapper<Article>().mapArray(JSONArray: articlesData))
+        }
     }
     
 }
 
-class Article : Mappable {
+class Article: Object, Mappable {
     
-    var author: String?
-    var title: String?
-    var description: String?
-    var url: String?
-    var urlToImage: String?
-    var publishedAt: String?
+    dynamic var author = ""
+    dynamic var title = ""
+    dynamic var descriptionNews = ""
+    dynamic var url = ""
+    dynamic var urlToImage = ""
+    dynamic var publishedAt = ""
     
-    required init?(map: Map){
-        
+    override static func primaryKey() -> String? {
+        return "author"
+    }
+    
+    //Impl. of Mappable protocol
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
         author <- map["author"]
         title <- map["title"]
-        description <- map["description"]
+        descriptionNews <- map["description"]
         url <- map["url"]
         urlToImage <- map["urlToImage"]
         publishedAt <- map["publishedAt"]
