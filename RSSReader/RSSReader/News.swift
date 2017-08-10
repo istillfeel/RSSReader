@@ -46,7 +46,7 @@ class Article: Object, Mappable {
     dynamic var publishedAt = ""
     
     override static func primaryKey() -> String? {
-        return "author"
+        return "url"
     }
     
     //Impl. of Mappable protocol
